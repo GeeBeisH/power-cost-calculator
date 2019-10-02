@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="./css/power-cost-calculator.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="labelcontainer" style="text-align: right">
+            <div class="single-row">
+                <h1 class="thin" ></h1>
+            </div>
+            <div class="single-row">
+                <h2 class="thin">Price(ZAR)</h2>
+            </div>    
+            <div class="double-row">                
+                <h2 class="thin">Output (kW):</h2>
+            </div>    
+            <div class="double-row">
+                <h2 class="thin">Energy (kWh):</span> kWh</h2>
+            </div>  
+            <div class="single-row">
+                <h2 class="thin">Cycles:</h2>
+            </div> 
+            <div class="single-row">
+                <h2 class="thin">Efficiency:</h2> 
+            </div>
+            <div class="single-row">
+                <h2 class="thin">DOD:</h2>
+            </div> 
+            <div class="single-row">
+                <h1 id="" class="thin" ></h1>
+            </div>
+            <div class="single-row">
+                <h5></h5>
+            </div>             
+        </div>
+
+        <div class="slidecontainer">
+            <div class="single-row">
+                <h1>SolarMD SS4074</h1>
+            </div>
+            <div class="single-row">
+                <h2 class="thin">RRP*</h2>
+            </div>
+            <div class="double-row">
+                    <div class="single-row">
+                        <input type="range" step="60" min="60" max="600" value="60" class="slider1" id="powerRange">
+                    </div>
+                    <div class="single-row">
+                        <h2 class="thin"><span id="powerSliderInfo"></span>  kW</h2>
+                    </div>               
+                
+            </div>
+            <div class="double-row">
+                    <div class="single-row">
+                            <input type="range" step="67.2" min="67.2" max="268.8" value="67.2" class="slider1" id="energyRange">
+                    </div>
+                    <div class="single-row">
+                        <h2 class="thin"><span id="energySliderInfo"></span> kWh</h2>
+                    </div>
+            </div>
+            <div class="single-row">
+                <h2 class="thin">8000</h2>
+            </div>
+            <div class="single-row">
+                <h2 class="thin">92%</h2>
+            </div>
+            <div class="single-row">
+                <h2 class="thin">100%</h2>
+            </div>
+            <div class="single-row">
+                <h1 id="solarmd-costing" class="thin" >R<span id="solarmd-cost-value"></span>/kWh</h1>
+            </div>
+            <div class="single-row">
+                <h5>Charge time: <span id="chargeTime"></span> Hours</h5>
+            </div>
+        </div>
+
+        <div class="copetitorcontainer">
+            <div class="single-row">
+                <h1 class="thin">Competitor</h1>
+            </div>
+            <div class="single-row">
+                <h2 class="thin"><input type="text" name="copete-price" id="compete-price" placeholder="900000">(ZAR)</h2>
+            </div>
+            <div class="double-row">
+                <h2 class="thin"><input type="text" name="copete-output" id="compete-output" placeholder="60">kW</h2>
+            </div>
+            <div class="double-row">
+                <h2 class="thin"><input type="text" name="copete-energy" id="compete-energy" placeholder="100">kWh</h2>
+            </div>
+            <div class="single-row">
+                <h2 class="thin"><input type="text" name="copete-cycles" id="compete-cycles" placeholder="5000"></h2>
+            </div>
+            <div class="single-row">
+                <h2 class="thin"><input type="text" name="compete-efficiency" id="compete-efficiency" placeholder="87">%</h2>
+            </div>
+            <div class="single-row">
+                <h2 class="thin"><input type="text" name="copete-DOD" id="compete-DOD" placeholder="80">%</h2>
+            </div>
+            <div class="single-row">
+                <h1 id="solarmd-competitor-costing" class="thin" >R<span id="solarmd-competitor-cost-value"></span>/kWh</h1>
+            </div>
+            <div class="single-row">
+                <h5>Charge time: <span id="chargeTime"></span> Hours</h5>
+            </div>            
+    </div>
+
+
+
+<script src="./js/power-cost-calculator.js"></script>
+
+</body>
+</html>
