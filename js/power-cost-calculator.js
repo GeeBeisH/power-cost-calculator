@@ -2,6 +2,10 @@ const costPerKWH = (price, efficiency, cycles, energyKWH, dischargeDepth) =>{
     return (price/(efficiency*cycles*energyKWH*dischargeDepth))*100000;
 }
 
+// setInputFilter(document.querySelectorAll(".numbersOnly"), function(value) {
+//     return /^\d*\.?\d*$/.test(value);
+//     });
+
 let slider1 = document.getElementById("powerRange");
 let powerOutput = document.getElementById("powerSliderInfo");
 
@@ -36,6 +40,9 @@ powerOutput.innerHTML = this.value;
 
 //Update Energy Slider on slider event
 function mouseUp() {
+
+    
+
 let stepMultiplier = slider1.value/60;
 
 //Dynamic energy slider output

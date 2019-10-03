@@ -35,8 +35,8 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
     "header  header  header"
-        "content content content"
-        "footer  footer  footer";
+    "content content content"
+    "footer  footer  footer";
     grid-gap: 10px;
 
     }
