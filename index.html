@@ -9,19 +9,24 @@
 
 </head>
 <body>
+
     <div class="wrapper">
+            <div class="headIntro">
+                <h1>Actual power storage costs</h1>
+                    <h3 class="thin">In order to accurately calculate power storage costs per kWh, the entire storage system, i.e. the battery and battery inverter, is taken into account. The key parameters here are the discharge depth [DOD], system efficiency [%] and energy content [rated capacity in kWh]. </h3>
+                </div>
         <div class="labelcontainer">
             <div class="single-row">
                 <h1 class="thin" ></h1>
             </div>
             <div class="single-row">
-                <h2 class="thin">Price(ZAR)</h2>
+                <h2 class="thin">Price (ZAR):</h2>
             </div>    
             <div class="double-row">                
                 <h2 class="thin">Output (kW):</h2>
             </div>    
             <div class="double-row">
-                <h2 class="thin">Energy (kWh):</span> kWh</h2>
+                <h2 class="thin">Energy (kWh):</h2>
             </div>  
             <div class="single-row">
                 <h2 class="thin">Cycles:</h2>
@@ -74,32 +79,40 @@
 
         <div class="copetitorcontainer">
             <div class="single-row">
-                <h1 class="thin">Competitor</h1>
+                <h1 class="thin">Comparison</h1>
             </div>
             <div class="single-row">
-                <h2 class="thin"><input type="text" name="compete-price" id="compete-price" placeholder="900000">(ZAR)</h2>
+                <h2 class="thin tooltip"><input type="text" name="competePrice" id="competePrice" placeholder="900000" >
+                    <div class="top" id="remindUser">
+                            <h3>Please complete all the input fields for a comparison</h3>
+                            <h3>Only use numbers!</h3>
+                            <i></i>
+                    </div>(ZAR)</h2>
             </div>
             <div class="double-row">
-                <h2 class="thin"><input type="text" name="compete-output" id="compete-output" placeholder="60">kW</h2>
+                <h2 class="thin"><input type="text" name="competeOutput" id="competeOutput" placeholder="60">kW</h2>
             </div>
             <div class="double-row">
-                <h2 class="thin"><input type="text" name="compete-energy" id="compete-energy" placeholder="100">kWh</h2>
+                <h2 class="thin"><input type="text" name="competeEnergy" id="competeEnergy" placeholder="100">kWh</h2>
             </div>
             <div class="single-row">
-                <h2 class="thin"><input type="text" name="compete-cycles" id="compete-cycles" placeholder="5000"></h2>
+                <h2 class="thin"><input type="text" name="competeCycles" id="competeCycles" placeholder="5000"></h2>
             </div>
             <div class="single-row">
-                <h2 class="thin"><input type="text" name="commpete-efficiency" id="compete-efficiency" placeholder="87">%</h2>
+                <h2 class="thin"><input type="text" name="commpeteEfficiency" id="competeEfficiency" placeholder="87">%</h2>
             </div>
             <div class="single-row">
-                <h2 class="thin"><input type="text" name="compete-DOD" id="compete-DOD" placeholder="80">%</h2>
+                <h2 class="thin"><input type="text" name="competeDOD" id="competeDOD" placeholder="80">%</h2>
             </div>
             <div class="single-row">
                 <h1 id="solarmd-competitor-costing" class="thin" >R<span id="solarmd-competitor-cost-value"></span>/kWh</h1>
             </div>
             <div class="single-row">
-                <h5>Charge time: <span id="chargeTime"></span> Hours</h5>
+                <h5>Charge time: <span id="competitorChargeTime"></span> Hours</h5>
             </div>            
+    </div>
+    <div class="requestForm">
+
     </div>
 
 

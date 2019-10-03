@@ -1,5 +1,5 @@
 const costPerKWH = (price, efficiency, cycles, energyKWH, dischargeDepth) =>{
-    return (price/(efficiency*cycles*energyKWH*dischargeDepth))*1000;
+    return (price/(efficiency*cycles*energyKWH*dischargeDepth))*100000;
 }
 
 let slider1 = document.getElementById("powerRange");
@@ -11,12 +11,21 @@ let energyOutput = document.getElementById("energySliderInfo");
 let chargeTime = document.getElementById("chargeTime");
 var solarMD_cost = 0.00;
 
-var competitor_cost = 21.00;
-
+var competitor_cost = 0.00;
+let competePrice = document.getElementById("competePrice");
+let competeOutput = document.getElementById("competeOutput");
+let competeEnergy = document.getElementById("competeEnergy");
+let competeCycles = document.getElementById("competeCycles");
+let competeEfficiency = document.getElementById("competeEfficiency");
+let competeDOD = document.getElementById("competeDOD");
+let competitorChargeTime = document.getElementById("competitorChargeTime");
 
 //Event listener - Mouse up
-document.getElementById("powerRange").addEventListener("mouseup", mouseUp) ||
-document.getElementById("energyRange").addEventListener("mouseup", mouseUp);
+// document.getElementById("powerRange").addEventListener("mouseup", mouseUp) ||
+// document.getElementById("energyRange").addEventListener("mouseup", mouseUp);
+
+
+document.querySelector("body").addEventListener("mouseup", mouseUp);
 
 powerOutput.innerHTML = slider1.value;
 energyOutput.innerHTML = energySlider.value;
@@ -43,19 +52,48 @@ chargeTime.innerHTML = (energyOutput.innerHTML/powerOutput.innerHTML).toFixed(2)
 solarMD_cost = (costPerKWH(
         500000, 
         92, 
-        8, 
+        8000, 
         energySlider.value, 
-        100)).toFixed(2);
+        100
+        )).toFixed(2);
 
-competitor_cost = (costPerKWH(500000, 92, 8, energySlider.value, 100)).toFixed(2);
 
-document.getElementById("solarmd-competitor-cost-value").textContent = competitor_cost;
+
+competitor_cost = (costPerKWH(
+        competePrice.value, 
+        competeEfficiency.value, 
+        competeCycles.value, 
+        competeEnergy.value, 
+        competeDOD.value
+        )).toFixed(2);
+
+competitorChargeTime.innerHTML = (competeEnergy.value/competeOutput.value).toFixed(2);
 
 document.getElementById("solarmd-cost-value").textContent = solarMD_cost;
-if (solarMD_cost > competitor_cost) {
+
+if (competePrice.value == "" || 
+    competeOutput.value == "" ||
+    competeEfficiency.value == "" || 
+    competeCycles.value == "" ||
+    competeEnergy.value == "" ||
+    competeDOD.value == "") { 
+    document.getElementById("remindUser").style.visibility = "visible";
+} else {
+    document.getElementById("remindUser").style.visibility = "hidden";
+}
+
+
+if (competitor_cost === "NaN" || competitor_cost === "Infinity") {
+    toString(competitor_cost);
+    competitor_cost = "..."
+    document.getElementById("solarmd-competitor-cost-value").textContent = competitor_cost;       
+    document.getElementById("solarmd-competitor-costing").style.color = "#0000ff";
+    }else if (parseFloat(solarMD_cost) > parseFloat(competitor_cost)) { 
+        document.getElementById("solarmd-competitor-cost-value").textContent = competitor_cost;       
         document.getElementById("solarmd-costing").style.color = "#ff0000";
         document.getElementById("solarmd-competitor-costing").style.color = "#009900";
     } else {
+        document.getElementById("solarmd-competitor-cost-value").textContent = competitor_cost;
         document.getElementById("solarmd-costing").style.color = "#009900";
         document.getElementById("solarmd-competitor-costing").style.color = "#ff0000";
     }
@@ -72,3 +110,4 @@ energySlider.oninput = function() {
 
 
 
+;
