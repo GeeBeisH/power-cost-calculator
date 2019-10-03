@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="labelcontainer" style="text-align: right">
+        <div class="labelcontainer">
             <div class="single-row">
                 <h1 class="thin" ></h1>
             </div>
@@ -48,21 +48,12 @@
                 <h2 class="thin">RRP*</h2>
             </div>
             <div class="double-row">
-                    <div class="single-row">
-                        <input type="range" step="60" min="60" max="600" value="60" class="slider1" id="powerRange">
-                    </div>
-                    <div class="single-row">
-                        <h2 class="thin"><span id="powerSliderInfo"></span>  kW</h2>
-                    </div>               
-                
+                <input type="range" step="60" min="60" max="600" value="60" class="slider1" id="powerRange">
+                <h2 class="thin"><span id="powerSliderInfo"></span>  kW</h2>
             </div>
-            <div class="double-row">
-                    <div class="single-row">
-                            <input type="range" step="67.2" min="67.2" max="268.8" value="67.2" class="slider1" id="energyRange">
-                    </div>
-                    <div class="single-row">
-                        <h2 class="thin"><span id="energySliderInfo"></span> kWh</h2>
-                    </div>
+            <div class="double-row">                    
+                <input type="range" step="67.2" min="67.2" max="268.8" value="67.2" class="slider1" id="energyRange">
+                <h2 class="thin"><span id="energySliderInfo"></span> kWh</h2>
             </div>
             <div class="single-row">
                 <h2 class="thin">8000</h2>
@@ -86,22 +77,22 @@
                 <h1 class="thin">Competitor</h1>
             </div>
             <div class="single-row">
-                <h2 class="thin"><input type="text" name="copete-price" id="compete-price" placeholder="900000">(ZAR)</h2>
+                <h2 class="thin"><input type="text" name="compete-price" id="compete-price" placeholder="900000">(ZAR)</h2>
             </div>
             <div class="double-row">
-                <h2 class="thin"><input type="text" name="copete-output" id="compete-output" placeholder="60">kW</h2>
+                <h2 class="thin"><input type="text" name="compete-output" id="compete-output" placeholder="60">kW</h2>
             </div>
             <div class="double-row">
-                <h2 class="thin"><input type="text" name="copete-energy" id="compete-energy" placeholder="100">kWh</h2>
+                <h2 class="thin"><input type="text" name="compete-energy" id="compete-energy" placeholder="100">kWh</h2>
             </div>
             <div class="single-row">
-                <h2 class="thin"><input type="text" name="copete-cycles" id="compete-cycles" placeholder="5000"></h2>
+                <h2 class="thin"><input type="text" name="compete-cycles" id="compete-cycles" placeholder="5000"></h2>
             </div>
             <div class="single-row">
-                <h2 class="thin"><input type="text" name="compete-efficiency" id="compete-efficiency" placeholder="87">%</h2>
+                <h2 class="thin"><input type="text" name="commpete-efficiency" id="compete-efficiency" placeholder="87">%</h2>
             </div>
             <div class="single-row">
-                <h2 class="thin"><input type="text" name="copete-DOD" id="compete-DOD" placeholder="80">%</h2>
+                <h2 class="thin"><input type="text" name="compete-DOD" id="compete-DOD" placeholder="80">%</h2>
             </div>
             <div class="single-row">
                 <h1 id="solarmd-competitor-costing" class="thin" >R<span id="solarmd-competitor-cost-value"></span>/kWh</h1>

@@ -13,7 +13,6 @@ var solarMD_cost = 0.00;
 
 var competitor_cost = 21.00;
 
-document.getElementById("solarmd-competitor-cost-value").textContent = competitor_cost;
 
 //Event listener - Mouse up
 document.getElementById("powerRange").addEventListener("mouseup", mouseUp) ||
@@ -41,7 +40,16 @@ powerOutput.innerHTML = slider1.value;
 //Charge time calculation
 chargeTime.innerHTML = (energyOutput.innerHTML/powerOutput.innerHTML).toFixed(2);
 
-solarMD_cost = (costPerKWH(500000, 92, 8, energySlider.value, 100)).toFixed(2);
+solarMD_cost = (costPerKWH(
+        500000, 
+        92, 
+        8, 
+        energySlider.value, 
+        100)).toFixed(2);
+
+competitor_cost = (costPerKWH(500000, 92, 8, energySlider.value, 100)).toFixed(2);
+
+document.getElementById("solarmd-competitor-cost-value").textContent = competitor_cost;
 
 document.getElementById("solarmd-cost-value").textContent = solarMD_cost;
 if (solarMD_cost > competitor_cost) {

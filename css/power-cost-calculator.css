@@ -10,13 +10,13 @@ h3 {
 }
 
 .single-row {
-    height: 60px;
+    height: 80px;
     /* align-items: center; */
 
 }
 
 .double-row {
-    height: 100px;
+    height: 80px;
     /* align-items: center; */
 
 }
@@ -37,9 +37,28 @@ h3 {
 
     }
 
+.labelcontainer {
+    display: grid;
+    text-align: right;
+}
+
 .slidecontainer {
+display: grid;
 width: 100%;
 text-align: center;
+}
+
+.copetitorcontainer{
+    display: grid;
+}
+
+input[type=text] {
+    border: none;
+    padding: 10px;
+    
+    -moz-box-shadow:    5px 10px 18px #888888;
+    -webkit-box-shadow: 5px 10px 18px #888888;
+    box-shadow:         5px 10px 18px #888888;;
 }
 
 .slider1 {
