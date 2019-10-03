@@ -29,7 +29,7 @@ let competitorChargeTime = document.getElementById("competitorChargeTime");
 // document.getElementById("energyRange").addEventListener("mouseup", mouseUp);
 
 
-document.querySelector("body").addEventListener("mouseup", mouseUp);
+document.querySelector("body").addEventListener("change", changeResults);
 
 powerOutput.innerHTML = slider1.value;
 energyOutput.innerHTML = energySlider.value;
@@ -39,9 +39,7 @@ powerOutput.innerHTML = this.value;
 }
 
 //Update Energy Slider on slider event
-function mouseUp() {
-
-    
+function changeResults() {    
 
 let stepMultiplier = slider1.value/60;
 
