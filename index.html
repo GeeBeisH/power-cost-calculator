@@ -19,69 +19,57 @@
             <div class="single-row">
                 <h1 class="thin" ></h1>
             </div>
-            <div class="single-row">
+            <div class="single-row dark">
                 <h2 class="thin">Price (ZAR):</h2>
             </div>    
-            <div class="double-row">                
+            <div class="double-row light">                
                 <h2 class="thin">Output (kW):</h2>
             </div>    
-            <div class="double-row">
+            <div class="double-row dark">
                 <h2 class="thin">Energy (kWh):</h2>
             </div>  
-            <div class="single-row">
+            <div class="single-row light">
                 <h2 class="thin">Cycles:</h2>
             </div> 
-            <div class="single-row">
+            <div class="single-row dark">
                 <h2 class="thin">Efficiency:</h2> 
             </div>
-            <div class="single-row">
+            <div class="single-row light">
                 <h2 class="thin">DOD:</h2>
             </div> 
-            <!-- <div class="single-row">
-                <h1 id="" class="thin" ></h1>
-            </div>
-            <div class="single-row">
-                <h5></h5>
-            </div>              -->
         </div>
 
         <div class="slidecontainer">
             <div class="single-row">
                 <h1>SolarMD SS4074</h1>
             </div>
-            <div class="single-row">
+            <div class="single-row dark">
                 <h2 class="thin">RRP*</h2>
             </div>
-            <div class="double-row">
+            <div class="double-row light">
                 <input type="range" step="60" min="60" max="600" value="60" class="slider1" id="powerRange">
                 <h2 class="thin"><span id="powerSliderInfo"></span>  kW</h2>
             </div>
-            <div class="double-row">                    
+            <div class="double-row dark">                    
                 <input type="range" step="67.2" min="67.2" max="268.8" value="67.2" class="slider1" id="energyRange">
                 <h2 class="thin"><span id="energySliderInfo"></span> kWh</h2>
             </div>
-            <div class="single-row">
+            <div class="single-row light">
                 <h2 class="thin">8000</h2>
             </div>
-            <div class="single-row">
+            <div class="single-row dark">
                 <h2 class="thin">92%</h2>
             </div>
-            <div class="single-row">
+            <div class="single-row light">
                 <h2 class="thin">100%</h2>
             </div>
-            <!-- <div class="single-row">
-                <h1 id="solarmd-costing" class="thin" >R<span id="solarmd-cost-value"></span>/kWh</h1>
-            </div>
-            <div class="single-row">
-                <h5>Charge time: <span id="chargeTime"></span> Hours</h5>
-            </div> -->
         </div>
 
         <div class="copetitorcontainer">
             <div class="single-row">
                 <h1 class="thin">Comparison</h1>
             </div>
-            <div class="single-row">
+            <div class="single-row dark">
                 <h2 class="thin tooltip"><input type="text" name="competePrice" id="competePrice" placeholder="900000"  class="numberOnly">
                     <div class="top" id="remindUser">
                             <h3>Please complete all the input fields for an accurate comparison</h3>
@@ -89,49 +77,40 @@
                             <i></i>
                     </div>(ZAR)</h2>
             </div>
-            <div class="double-row">
+            <div class="double-row light">
                 <h2 class="thin"><input type="text" name="competeOutput" id="competeOutput" placeholder="60" class="numberOnly">kW</h2>
             </div>
-            <div class="double-row">
+            <div class="double-row dark">
                 <h2 class="thin"><input type="text" name="competeEnergy" id="competeEnergy" placeholder="100" class="numberOnly">kWh</h2>
             </div>
-            <div class="single-row">
+            <div class="single-row light">
                 <h2 class="thin"><input type="text" name="competeCycles" id="competeCycles" placeholder="5000" class="numberOnly"></h2>
             </div>
-            <div class="single-row">
+            <div class="single-row dark">
                 <h2 class="thin"><input type="text" name="commpeteEfficiency" id="competeEfficiency" placeholder="87" class="numberOnly">%</h2>
             </div>
-            <div class="single-row">
+            <div class="single-row light">
                 <h2 class="thin"><input type="text" name="competeDOD" id="competeDOD" placeholder="80" class="numberOnly">%</h2>
             </div>
-            <!-- <div class="single-row">
-                <h1 id="solarmd-competitor-costing" class="thin" >R<span id="solarmd-competitor-cost-value"></span>/kWh</h1>
-            </div>
-            <div class="single-row">
-                <h5>Charge time: <span id="competitorChargeTime"></span> Hours</h5>
-            </div>             -->
-    </div>
-    
-            <div></div>
-            <div>
-                <div class="single-row line-center">
-                        <h1 id="solarmd-costing" class="thin" >R<span id="solarmd-cost-value"></span>/kWh</h1>
-                    </div>
-                    <div class="single-row line-center">
-                        <h5>Charge time: <span id="chargeTime"></span> Hours</h5>
+    </div>    
+        <div></div>
+        <div>
+            <div class="single-row line-center">
+                    <h1 id="solarmd-costing" class="thin" >R<span id="solarmd-cost-value"></span>/kWh</h1>
                 </div>
+                <div class="single-row line-center">
+                    <h5>Charge time: <span id="chargeTime"></span> Hours</h5>
             </div>
-            <div>
+        </div>
+        <div>
+            <div class="single-row">
+                    <h1 id="solarmd-competitor-costing" class="thin" >R<span id="solarmd-competitor-cost-value"></span>/kWh</h1>
+                </div>
                 <div class="single-row">
-                        <h1 id="solarmd-competitor-costing" class="thin" >R<span id="solarmd-competitor-cost-value"></span>/kWh</h1>
-                    </div>
-                    <div class="single-row">
-                        <h5>Charge time: <span id="competitorChargeTime"></span> Hours</h5>
-                </div> 
-            </div>
-    
+                    <h5>Charge time: <span id="competitorChargeTime"></span> Hours</h5>
+            </div> 
+        </div>   
 
-        
     <div class="requestForm">
 
     </div>

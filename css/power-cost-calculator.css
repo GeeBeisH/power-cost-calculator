@@ -66,6 +66,10 @@ border-radius: 10px;
     text-align: center;
 }
 
+.dark {
+    background-color: hsla(210, 6%, 45%, 0.3);
+}
+
 .copetitorcontainer{
     display: grid;
 }
