@@ -11,10 +11,10 @@
 <body>
 
     <div class="wrapper">
-            <div class="headIntro">
-                <h1>Actual power storage costs</h1>
-                    <h3 class="thin">In order to accurately calculate power storage costs per kWh, the entire storage system, i.e. the battery and battery inverter, is taken into account. The key parameters here are the discharge depth [DOD], system efficiency [%] and energy content [rated capacity in kWh]. </h3>
-                </div>
+        <div class="headIntro">
+            <h1>Actual power storage costs</h1>
+            <h3 class="thin">In order to accurately calculate power storage costs per kWh, the entire storage system, i.e. the battery and battery inverter, is taken into account. The key parameters here are the discharge depth [DOD], system efficiency [%] and energy content [rated capacity in kWh]. </h3>
+        </div>
         <div class="labelcontainer">
             <div class="single-row">
                 <h1 class="thin" ></h1>
@@ -37,12 +37,12 @@
             <div class="single-row">
                 <h2 class="thin">DOD:</h2>
             </div> 
-            <div class="single-row">
+            <!-- <div class="single-row">
                 <h1 id="" class="thin" ></h1>
             </div>
             <div class="single-row">
                 <h5></h5>
-            </div>             
+            </div>              -->
         </div>
 
         <div class="slidecontainer">
@@ -69,12 +69,12 @@
             <div class="single-row">
                 <h2 class="thin">100%</h2>
             </div>
-            <div class="single-row">
+            <!-- <div class="single-row">
                 <h1 id="solarmd-costing" class="thin" >R<span id="solarmd-cost-value"></span>/kWh</h1>
             </div>
             <div class="single-row">
                 <h5>Charge time: <span id="chargeTime"></span> Hours</h5>
-            </div>
+            </div> -->
         </div>
 
         <div class="copetitorcontainer">
@@ -104,13 +104,34 @@
             <div class="single-row">
                 <h2 class="thin"><input type="text" name="competeDOD" id="competeDOD" placeholder="80" class="numberOnly">%</h2>
             </div>
-            <div class="single-row">
+            <!-- <div class="single-row">
                 <h1 id="solarmd-competitor-costing" class="thin" >R<span id="solarmd-competitor-cost-value"></span>/kWh</h1>
             </div>
             <div class="single-row">
                 <h5>Charge time: <span id="competitorChargeTime"></span> Hours</h5>
-            </div>            
+            </div>             -->
     </div>
+    
+            <div></div>
+            <div>
+                <div class="single-row line-center">
+                        <h1 id="solarmd-costing" class="thin" >R<span id="solarmd-cost-value"></span>/kWh</h1>
+                    </div>
+                    <div class="single-row line-center">
+                        <h5>Charge time: <span id="chargeTime"></span> Hours</h5>
+                </div>
+            </div>
+            <div>
+                <div class="single-row">
+                        <h1 id="solarmd-competitor-costing" class="thin" >R<span id="solarmd-competitor-cost-value"></span>/kWh</h1>
+                    </div>
+                    <div class="single-row">
+                        <h5>Charge time: <span id="competitorChargeTime"></span> Hours</h5>
+                </div> 
+            </div>
+    
+
+        
     <div class="requestForm">
 
     </div>
