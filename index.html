@@ -75,22 +75,22 @@
                             <h3>Please complete all the input fields for an accurate comparison</h3>
                             <h3>Only use numbers!</h3>
                             <i></i>
-                    </div>(ZAR)</h2>
+                    </div> (ZAR)</h2>
             </div>
             <div class="double-row light">
-                <h2 class="thin"><input type="text" name="competeOutput" id="competeOutput" placeholder="60" class="numberOnly">kW</h2>
+                <h2 class="thin"><input type="text" name="competeOutput" id="competeOutput" placeholder="60" class="numberOnly"> kW</h2>
             </div>
             <div class="double-row dark">
-                <h2 class="thin"><input type="text" name="competeEnergy" id="competeEnergy" placeholder="100" class="numberOnly">kWh</h2>
+                <h2 class="thin"><input type="text" name="competeEnergy" id="competeEnergy" placeholder="100" class="numberOnly"> kWh</h2>
             </div>
             <div class="single-row light">
                 <h2 class="thin"><input type="text" name="competeCycles" id="competeCycles" placeholder="5000" class="numberOnly"></h2>
             </div>
             <div class="single-row dark">
-                <h2 class="thin"><input type="text" name="commpeteEfficiency" id="competeEfficiency" placeholder="87" class="numberOnly">%</h2>
+                <h2 class="thin"><input type="text" name="commpeteEfficiency" id="competeEfficiency" placeholder="87" class="numberOnly"> %</h2>
             </div>
             <div class="single-row light">
-                <h2 class="thin"><input type="text" name="competeDOD" id="competeDOD" placeholder="80" class="numberOnly">%</h2>
+                <h2 class="thin"><input type="text" name="competeDOD" id="competeDOD" placeholder="80" class="numberOnly"> %</h2>
             </div>
     </div>    
         <div></div>
@@ -112,12 +112,50 @@
         </div>   
 
     <div class="requestForm">
-
     </div>
+    <div class="requestForm">
+        <!-- <a href="feedback_form.html" id="request-button">Request more information</a> -->
+        <button class="open-button" onclick="openForm()" id="request-button">Request more information</button>
+    </div>
+    <div class="requestForm">
+    </div>
+    
+            <div></div>
+            <div id="popup-wrapper">
+                <div class="form-popup" id="myForm">
+                    <h1>Information Request Form</h1>
+        
+                    <form method="post" action="send_mail.php" class="request-form form-container">
+                    <p>
+                    <label>First Name<br>
+                    <input type="text" name="first_name" required>
+                    </label> 
+                    </p>
+                    <p>
+                    <label>Email<br> 
+                    <input type="email" name="email_address">
+                    </label>
+                    </p>
+                    <p>
+                    <label>Comments<br>
+                    <textarea name="comments" maxlength="500"></textarea>
+                    </label>
+                    </p>
+                    <!-- <p><button>Submit the form</button></p> -->
+                    <button type="submit">Submit the form</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div></div>	
+            
+
 
 
 
 <script src="./js/power-cost-calculator.js"></script>
+<script src="./js/modal-form.js"></script>
 
 </body>
 </html>

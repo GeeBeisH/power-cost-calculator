@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fedback</title>
+    <link href="./css/power-cost-calculator.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <div></div>
+        <div>
+                <h1>Information Request Form</h1>
+
+                <form method="post" action="send_mail.php" class="request-form">
+                <p>
+                <label>First Name<br>
+                <input type="text" name="first_name" required>
+                </label> 
+                </p>
+                <p>
+                <label>Email<br> 
+                <input type="email" name="email_address">
+                </label>
+                </p>
+                <p>
+                <label>Comments<br>
+                <textarea name="comments" maxlength="500"></textarea>
+                </label>
+                </p>
+                <!-- <p><button>Submit the form</button></p> -->
+                <button type="submit">Submit the form</button>
+                </form>
+        </div>
+        <div></div>	
+

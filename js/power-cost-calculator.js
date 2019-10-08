@@ -5,7 +5,7 @@ const costPerKWH = (price, efficiency, cycles, energyKWH, dischargeDepth) =>{
 // setInputFilter(document.querySelectorAll(".numbersOnly"), function(value) {
 //     return /^\d*\.?\d*$/.test(value);
 //     });
-
+let RRP = 500000;
 let slider1 = document.getElementById("powerRange");
 let powerOutput = document.getElementById("powerSliderInfo");
 
@@ -23,11 +23,6 @@ let competeCycles = document.getElementById("competeCycles");
 let competeEfficiency = document.getElementById("competeEfficiency");
 let competeDOD = document.getElementById("competeDOD");
 let competitorChargeTime = document.getElementById("competitorChargeTime");
-
-//Event listener - Mouse up
-// document.getElementById("powerRange").addEventListener("mouseup", mouseUp) ||
-// document.getElementById("energyRange").addEventListener("mouseup", mouseUp);
-
 
 document.querySelector("body").addEventListener("change", changeResults);
 
@@ -55,7 +50,7 @@ powerOutput.innerHTML = slider1.value;
 chargeTime.innerHTML = (energyOutput.innerHTML/powerOutput.innerHTML).toFixed(2);
 
 solarMD_cost = (costPerKWH(
-        500000, 
+        RRP, 
         92, 
         8000, 
         energySlider.value, 
@@ -108,11 +103,4 @@ if (competitor_cost === "NaN" || competitor_cost === "Infinity") {
 energySlider.oninput = function() {
     energyOutput.innerHTML = this.value;
     }
-
-// Cost per kW calculation
-
-
-
-
-
-;
+    ;
