@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div class="wrapper">
+    <div class="wrapper" >
         <div class="headIntro">
             <h1>Actual power storage costs</h1>
             <h3 class="thin">In order to accurately calculate power storage costs per kWh, the entire storage system, i.e. the battery and battery inverter, is taken into account. The key parameters here are the discharge depth [DOD], system efficiency [%] and energy content [rated capacity in kWh]. </h3>
@@ -92,7 +92,7 @@
             <div class="single-row light">
                 <h2 class="thin"><input type="text" name="competeDOD" id="competeDOD" placeholder="80" class="numberOnly"> %</h2>
             </div>
-    </div>    
+        </div>    
         <div></div>
         <div>
             <div class="single-row line-center">
@@ -109,7 +109,8 @@
                 <div class="single-row">
                     <h5>Charge time: <span id="competitorChargeTime"></span> Hours</h5>
             </div> 
-        </div>   
+        </div>
+       
 
     <div class="requestForm">
     </div>
@@ -119,50 +120,68 @@
     <div class="requestForm">
     </div>
     
-            <div></div>
-            <div id="popup-wrapper">
-                    
-                
-                <div class="form-popup" id="myForm">
-                           
-                    <form method="post" action="send_mail.php" class="request-form form-container">
-                            <h1>Information Request Form</h1>
-                        <div class="wrapper" id="grid-select">
-                                                                 
-                            <div id="on-grid">
-                                    On-Grid
-                            </div>
-                            <div id="empty-grid"></div>
-
-                            <div id="off-grid">
-                                Off-Grid
-                            </div>
-                            
-                            
-                        </div> 
-
-                    <p>
-                    <label>First Name<br>
-                    <input type="text" name="first_name" required>
-                    </label> 
-                    </p>
-                    <p>
-                    <label>Email<br> 
-                    <input type="email" name="email_address">
-                    </label>
-                    </p>
-                    <p>
-                    <label>Comments<br>
-                    <textarea name="comments" maxlength="500"></textarea>
-                    </label>
-                    </p>
-                    <button type="submit">Submit the form</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-                    </form>
-                </div>
-            </div>
+        <div></div>
+        <div id="popup-wrapper">                   
             
-            <div></div>	
+            <div class="form-popup" id="myForm">
+                        
+                <form method="post" action="send_mail.php" class="request-form form-container">
+                        <h1>Information Request Form</h1>
+                    
+                    <!-- Grid selector section -->
+                    <div class="wrapper" id="grid-select">
+                                                                
+                        <div id="on-grid">                           
+                                <img class="sellect-icon" id="on-grid-icon" src="./img/on-grid.png" alt="on grid">
+                        </div>
+                        <div class="empty-grid"></div>
+
+                        <div id="off-grid">                                
+                            <img class="sellect-icon" id="off-grid-icon" src="./img/off-grid.png" alt="off grid">
+                        </div>
+                    </div> 
+
+                <!-- Load selector section -->
+                <div class="wrapper" id="load-select">
+                                                                
+                    <div id="self-consumption">                           
+                            <img class="sellect-icon" id="self-consumption-icon" src="./img/increase-self-consumption.png" alt="on grid">
+                    </div>
+                    <div class="empty-grid"></div>
+
+                    <div id="peak-load">                                
+                        <img class="sellect-icon" id="peak-load-icon" src="./img/peak-load-capping.png" alt="off grid">
+                    </div>
+                    <div id="hybrid-system">                                
+                        <img class="sellect-icon" id="hybrid-system-icon" src="./img/hybrid-systems.png" alt="off grid">
+                    </div>
+                </div>
+                <div id="submit-section">
+                    <p>
+                            <label>First Name<br>
+                            <input type="text" name="first_name" required>
+                            </label> 
+                        </p>
+                        <p>
+                            <label>Email<br> 
+                            <input type="email" name="email_address">
+                            </label>
+                        </p>
+                        <p>
+                            <label>Comments<br>
+                            <textarea name="comments" maxlength="500"></textarea>
+                            </label>
+                        </p>
+                            <button type="submit">Submit the form</button>
+                </div> 
+
+                
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                </form>
+            </div>
+        </div>            
+        <div></div>
+    </div>	
 
 
 <script src="./js/power-cost-calculator.js"></script>

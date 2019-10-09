@@ -1,9 +1,91 @@
+var gridSelected = null;
+var outputSelected = null;
+
+var onGridIcon = document.querySelector("#on-grid-icon");
+var offGridIcon = document.querySelector("#off-grid-icon");
+
+var selfConsumption = document.querySelector("#self-consumption");
+var peakLoad = document.querySelector("#peak-load");
+var hybridSystem = document.querySelector("#hybrid-system");
+
+var selfConsumptionIcon = document.querySelector("#self-consumption-icon");
+var peakLoadIcon = document.querySelector("#peak-load-icon");
+var hybridSystemIcon = document.querySelector("#hybrid-system-icon");
+
+var submitForm = document.querySelector("#submit-section");
+
+submitForm.style.display = "none";
+
+//Grid Selection
+const onGridSelect = () => {
+    onGridIcon.style.backgroundColor = "#FFB600";
+    offGridIcon.style.backgroundColor = "transparent";
+    gridSelected = true;
+
+    selfConsumption.style.display = "grid";
+    peakLoad.style.display = "grid";
+    hybridSystem.style.display = "none";
+
+};
+
+const offGridSelect = () => {
+    offGridIcon.style.backgroundColor = "#FFB600";
+    onGridIcon.style.backgroundColor = "transparent";
+    gridSelected = false;
+
+    selfConsumption.style.display = "grid";
+    peakLoad.style.display = "none";
+    hybridSystem.style.display = "grid";
+};
+
+// Listen for grid mouseclick selection
+document.querySelector("#on-grid-icon").addEventListener("click", onGridSelector);
+document.querySelector("#off-grid-icon").addEventListener("click", offGridSelector);
+
+//OutputSelection
+const selfConsumptionSelector = () => {
+    selfConsumptionIcon.style.backgroundColor = "#FFB600";
+    peakLoadIcon.style.backgroundColor = "transparent";
+    hybridSystemIcon.style.backgroundColor = "transparent";
+    outputSelected = 0;
+
+    // selfConsumption.style.display = "grid";
+    // peakLoad.style.display = "grid";
+    // hybridSystem.style.display = "none";
+
+};
+const peakLoadSelector = () => {
+    selfConsumptionIcon.style.backgroundColor = "transparent";
+    peakLoadIcon.style.backgroundColor = "#FFB600";
+    hybridSystemIcon.style.backgroundColor = "transparent";
+    outputSelected = 2;
+
+    // selfConsumption.style.display = "grid";
+    // peakLoad.style.display = "grid";
+    // hybridSystem.style.display = "none";
+
+};
+const hybridSystemSelector = () => {
+    selfConsumptionIcon.style.backgroundColor = "transparent";
+    peakLoadIcon.style.backgroundColor = "transparent";
+    hybridSystemIcon.style.backgroundColor = "#FFB600";
+    outputSelected = 3;
+
+    // selfConsumption.style.display = "grid";
+    // peakLoad.style.display = "grid";
+    // hybridSystem.style.display = "none";
+};
+
+// Listen for output mouseclick selection
+selfConsumptionIcon.addEventListener("click", selfConsumptionSelector);
+peakLoadIcon.addEventListener("click", peakLoadSelector);
+hybridSystemIcon.addEventListener("click", hybridSystemSelector);
+
+// Open and Close Modal Window
+// & Hide Reminder if active
 function openForm() {
     document.getElementById("myForm").style.display = "block";
-    // document.getElementById("myForm").style.top = `${ev.clientY - 20}px`;
-    // document.getElementById("myForm").style.left = `${ev.clientX - 20}px`;
     document.getElementById("remindUser").style.visibility = "hidden";
-
     }
     
     function closeForm() {
@@ -15,7 +97,14 @@ function openForm() {
     competeEnergy.value == "" ||
     competeDOD.value == "") { 
     document.getElementById("remindUser").style.visibility = "visible";
-} else {
-    document.getElementById("remindUser").style.visibility = "hidden";
-}
+    } else {
+        document.getElementById("remindUser").style.visibility = "hidden";
     }
+}
+
+function onGridSelector() {    
+    onGridSelect();        
+}
+function offGridSelector() {
+    offGridSelect();
+}

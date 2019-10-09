@@ -298,11 +298,74 @@ color: red;
     padding: 0 5%;
 } */
 
-#off-grid, #on-grid, #empty-grid{
+#off-grid, #on-grid, #self-consumption, #peak-load, #hybrid-system{
     display: grid;
+    text-align: center;
+    opacity:1; 
+    transition: display 4.8s;
+}
+
+
+.sellect-icon {
+    max-width: 120px;
+    margin: 0 auto;
+    border: solid 2px grey;
+    border-radius: 10px;
+    padding: 5px;
+    -moz-box-shadow:    5px 10px 18px #888888;
+    -webkit-box-shadow: 5px 10px 18px #888888;
+    box-shadow:         5px 10px 18px #888888;
+}
+
+#on-grid::after {
+    content: "ON GRID"; 
+    font-weight: 300;
+    color: #2a2727;   
+}
+
+#off-grid::after {
+    content: "OFF GRID";   
+    font-weight: 300;
+    color: #2a2727; 
+}
+
+.sellect-icon:hover {
+    background-color: #FFB600;
+    cursor: pointer;
+}
+
+#self-consumption::after {
+    content: "INCREASE" "\A" "SELF CONSUMPTION";
+    font-weight: 300;
+    color: #2a2727; 
+    white-space: pre; 
+    
+}
+#peak-load::after {
+    content: "PEAK" "\A" "LOAD CAPPING";   
+    font-weight: 300;
+    color: #2a2727;
+    white-space: pre;
+}
+
+#hybrid-system::after {
+    content: "HYBRID SYSTEM";   
+    font-weight: 300;
+    color: #2a2727; 
+}
+
+#self-consumption, #peak-load, #hybrid-system  {
+    display: none;
 
 }
 
-#on-grid {
-    text-align: right;
+
+#popup-wrapper {
+    overflow-y: initial !important;    
+}
+
+#myForm {
+    height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
