@@ -114,7 +114,6 @@
     <div class="requestForm">
     </div>
     <div class="requestForm">
-        <!-- <a href="feedback_form.html" id="request-button">Request more information</a> -->
         <button class="open-button" onclick="openForm()" id="request-button">Request more information</button>
     </div>
     <div class="requestForm">
@@ -122,10 +121,26 @@
     
             <div></div>
             <div id="popup-wrapper">
+                    
+                
                 <div class="form-popup" id="myForm">
-                    <h1>Information Request Form</h1>
-        
+                           
                     <form method="post" action="send_mail.php" class="request-form form-container">
+                            <h1>Information Request Form</h1>
+                        <div class="wrapper" id="grid-select">
+                                                                 
+                            <div id="on-grid">
+                                    On-Grid
+                            </div>
+                            <div id="empty-grid"></div>
+
+                            <div id="off-grid">
+                                Off-Grid
+                            </div>
+                            
+                            
+                        </div> 
+
                     <p>
                     <label>First Name<br>
                     <input type="text" name="first_name" required>
@@ -141,17 +156,13 @@
                     <textarea name="comments" maxlength="500"></textarea>
                     </label>
                     </p>
-                    <!-- <p><button>Submit the form</button></p> -->
                     <button type="submit">Submit the form</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
                     </form>
                 </div>
             </div>
             
             <div></div>	
-            
-
-
 
 
 <script src="./js/power-cost-calculator.js"></script>
