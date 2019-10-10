@@ -110,7 +110,7 @@
                     <h5>Charge time: <span id="competitorChargeTime"></span> Hours</h5>
             </div> 
         </div>
-       
+      
 
     <div class="requestForm">
     </div>
@@ -119,6 +119,7 @@
     </div>
     <div class="requestForm">
     </div>
+
     
         <div></div>
         <div id="popup-wrapper">                   
@@ -129,33 +130,77 @@
                         <h1>Information Request Form</h1>
                     
                     <!-- Grid selector section -->
-                    <div class="wrapper" id="grid-select">
+                    <div class="form-wrapper" id="grid-select">
                                                                 
                         <div id="on-grid">                           
                                 <img class="sellect-icon" id="on-grid-icon" src="./img/on-grid.png" alt="on grid">
                         </div>
-                        <div class="empty-grid"></div>
 
                         <div id="off-grid">                                
                             <img class="sellect-icon" id="off-grid-icon" src="./img/off-grid.png" alt="off grid">
                         </div>
+                        
                     </div> 
+                    
 
-                <!-- Load selector section -->
-                <div class="wrapper" id="load-select">
-                                                                
+                <!-- Load grid select section -->
+                <div class="form-wrapper" id="load-select">                                                                
                     <div id="self-consumption">                           
                             <img class="sellect-icon" id="self-consumption-icon" src="./img/increase-self-consumption.png" alt="on grid">
                     </div>
-                    <div class="empty-grid"></div>
 
                     <div id="peak-load">                                
                         <img class="sellect-icon" id="peak-load-icon" src="./img/peak-load-capping.png" alt="off grid">
                     </div>
                     <div id="hybrid-system">                                
                         <img class="sellect-icon" id="hybrid-system-icon" src="./img/hybrid-systems.png" alt="off grid">
+                    </div>                    
+                </div>
+                
+
+                <!-- Load sloution confirm section -->
+                <div class="form-wrapper" id="battery-select">
+                                                                
+                    <div id="ss4037">
+                            <p>
+                            <label class="container"><img class="sellect-icon" id="self-consumption-icon" src="./img/SS4037-225x300.png" alt="ss4037">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    <input type="radio" name="battery-model" id="ss4037-model">                         
+                                    <span class="checkmark"></span>
+                            </label>
+                            
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolore doloribus, quibusdam sunt repellat consequatur, officia ab ullam accusamus id veritatis sequi consequuntur asperiores odit voluptate impedit mollitia tempora minima.
+
+                        </p>
+                            
+                    </div>
+
+                    <div id="ss4074">
+                        <p>
+                            <label class="container">
+                                <img class="sellect-icon" id="peak-load-icon" src="./img/SS4074_Solar-MD-Residential2-300x286.png" alt="ss4074">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam est ipsam expedita in accusantium velit praesentium sit nesciunt debitis aperiam, error nihil tempora temporibus commodi alias dolore dolorum vel vitae.
+                                <input type="radio" name="battery-model" id="ss4074-model">
+                                <span class="checkmark"></span>                                                              
+                            </label>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam est ipsam expedita in accusantium velit praesentium sit nesciunt debitis aperiam, error nihil tempora temporibus commodi alias dolore dolorum vel vitae.
+                        </p>
+                    </div>
+                    <div id="ss202">
+                        <p>
+                            <label class="container">
+                                <img class="sellect-icon" id="hybrid-system-icon" src="./img/CB12-cabinet.png" alt="CB12-cabinet">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam est ipsam expedita in accusantium velit praesentium sit nesciunt debitis aperiam, error nihil tempora temporibus commodi alias dolore dolorum vel vitae.
+                                <input type="radio" name="battery-model" id="ss202-model">
+                                <span class="checkmark"></span>                                                              
+                            </label>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam est ipsam expedita in accusantium velit praesentium sit nesciunt debitis aperiam, error nihil tempora temporibus commodi alias dolore dolorum vel vitae.
+                        </p>
                     </div>
                 </div>
+
+
+
+                <!-- Submit selector section -->
                 <div id="submit-section">
                     <p>
                             <label>First Name<br>

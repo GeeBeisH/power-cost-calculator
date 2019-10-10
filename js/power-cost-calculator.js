@@ -57,8 +57,6 @@ solarMD_cost = (costPerKWH(
         100
         )).toFixed(2);
 
-
-
 competitor_cost = (costPerKWH(
         competePrice.value, 
         competeEfficiency.value, 
@@ -97,7 +95,6 @@ if (competitor_cost === "NaN" || competitor_cost === "Infinity") {
         document.getElementById("solarmd-costing").style.color = "#009900";
         document.getElementById("solarmd-competitor-costing").style.color = "#ff0000";
     }
-
 }
 
 energySlider.oninput = function() {
