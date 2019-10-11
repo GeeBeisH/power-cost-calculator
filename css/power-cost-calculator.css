@@ -331,8 +331,8 @@ color: red;
     margin-top: 30px;
 }
 
-#ss4037, #ss4074, #ss202 {
-    display: block;
+#ss4037, #ss4074, #ss202, #mss {
+    /* display: block; */
     text-align: left;
     opacity:1; 
     transition: display 4.8s;
@@ -360,15 +360,17 @@ color: red;
 }
 
 #on-grid::after {
-    content: "ON GRID"; 
+    content: "ON-GRID" "\A" "SUPPORT"; 
     font-weight: 300;
-    color: #2a2727;   
+    color: #2a2727;
+    white-space: pre;   
 }
 
 #off-grid::after {
-    content: "OFF GRID";   
+    content: "OFF-GRID" "\A" "SUPPLY";   
     font-weight: 300;
     color: #2a2727; 
+    white-space: pre;
 }
 
 .sellect-icon:hover {
@@ -496,7 +498,7 @@ color: red;
     transform: rotate(45deg);
     }
 
-    #ss4037, #ss4074, #ss202 {
+    #ss4037, #ss4074, #ss202, #mss {
         display: none;
         border-radius: 5px;
         padding: 5px;

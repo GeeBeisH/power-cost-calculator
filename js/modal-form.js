@@ -15,6 +15,7 @@ var hybridSystemIcon = document.querySelector("#hybrid-system-icon");
 var ss4037Choice = document.querySelector("#ss4037");
 var ss4074Choice = document.querySelector("#ss4074");
 var ss202Choice = document.querySelector("#ss202");
+var mssChoice = document.querySelector("#mss");
 
 var submitForm = document.querySelector("#submit-section");
 
@@ -38,6 +39,7 @@ const onGridSelect = () => {
     ss4037Choice.style.display ="none";
     ss4074Choice.style.display ="none";
     ss202Choice.style.display ="none";
+    mssChoice.style.display ="none";
 
 
 };
@@ -59,6 +61,7 @@ const offGridSelect = () => {
     ss4037Choice.style.display ="none";
     ss4074Choice.style.display ="none";
     ss202Choice.style.display ="none";
+    mssChoice.style.display ="none";
 };
 
 // Listen for grid mouseclick selection
@@ -70,22 +73,34 @@ const selfConsumptionSelector = () => {
     selfConsumptionIcon.style.backgroundColor = "#FFB600";
     peakLoadIcon.style.backgroundColor = "transparent";
     hybridSystemIcon.style.backgroundColor = "transparent";
-    outputSelected = 0;
+    
 
-    ss4037Choice.style.display ="grid";
-    ss4074Choice.style.display ="none";
-    ss202Choice.style.display ="none";
-
+    if (gridSelected === false){
+        outputSelected = 0;
+        ss4037Choice.style.display ="none";
+        ss4074Choice.style.display ="none";
+        ss202Choice.style.display ="grid";
+        mssChoice.style.display = "grid";
+    } else {
+        outputSelected = 1;
+        ss4037Choice.style.display ="grid";
+        ss4074Choice.style.display ="grid";
+        ss202Choice.style.display ="none";
+        mssChoice.style.display = "none";
+    }
 };
+
+
 const peakLoadSelector = () => {
     selfConsumptionIcon.style.backgroundColor = "transparent";
     peakLoadIcon.style.backgroundColor = "#FFB600";
     hybridSystemIcon.style.backgroundColor = "transparent";
     outputSelected = 2;
 
-    ss4037Choice.style.display ="grid";
+    ss4037Choice.style.display ="none";
     ss4074Choice.style.display ="grid";
     ss202Choice.style.display ="none";
+    mssChoice.style.display = "none";
 
 };
 const hybridSystemSelector = () => {
@@ -97,6 +112,7 @@ const hybridSystemSelector = () => {
     ss4037Choice.style.display ="none";
     ss4074Choice.style.display ="none";
     ss202Choice.style.display ="grid";
+    mssChoice.style.display = "none";
 };
 
 // Listen for output mouseclick selection
@@ -143,14 +159,12 @@ selfConsumptionIcon.addEventListener("click", selfConsumptionSelector);
 peakLoadIcon.addEventListener("click", peakLoadSelector);
 hybridSystemIcon.addEventListener("click", hybridSystemSelector);
 
-
 // Open and Close Form
 // & Hide Reminder if active
 function openForm() {
     document.getElementById("myForm").style.display = "block";
     document.getElementById("remindUser").style.visibility = "hidden";
-    location.hash = "popup-wrapper";
-    
+    location.hash = "popup-wrapper";    
     }
     
     function closeForm() {
