@@ -359,18 +359,31 @@ color: red;
     box-shadow:         5px 10px 18px #888888;
 }
 
-#on-grid::after {
+#on-grid::before {
     content: "ON-GRID" "\A" "SUPPORT"; 
     font-weight: 300;
     color: #2a2727;
     white-space: pre;   
 }
+#on-grid::after {
+    content: "Your system is connected \Ato the public power grid."; 
+    font-weight: 300;
+    color: #2a2727;
+    white-space: pre;   
+}
 
-#off-grid::after {
+#off-grid::before {
     content: "OFF-GRID" "\A" "SUPPLY";   
     font-weight: 300;
     color: #2a2727; 
     white-space: pre;
+}
+
+#off-grid::after {
+    content: "Your system is not connected \Ato the public power grid."; 
+    font-weight: 300;
+    color: #2a2727;
+    white-space: pre;   
 }
 
 .sellect-icon:hover {

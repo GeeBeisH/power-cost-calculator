@@ -1,10 +1,12 @@
 const costPerKWH = (price, efficiency, cycles, energyKWH, dischargeDepth) =>{
     return (price/(efficiency*cycles*energyKWH*dischargeDepth))*100000;
 }
-
+//! -- For much later -- !//
 // setInputFilter(document.querySelectorAll(".numbersOnly"), function(value) {
 //     return /^\d*\.?\d*$/.test(value);
 //     });
+
+
 let RRP = 500000;
 let slider1 = document.getElementById("powerRange");
 let powerOutput = document.getElementById("powerSliderInfo");
@@ -99,5 +101,4 @@ if (competitor_cost === "NaN" || competitor_cost === "Infinity") {
 
 energySlider.oninput = function() {
     energyOutput.innerHTML = this.value;
-    }
-    ;
+};
